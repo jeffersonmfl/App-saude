@@ -1,90 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:padding="16dp">
 
-
-    <Button
-        android:id="@+id/calcular"
-        android:layout_width="173dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="84dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.441"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="52dp"
-        android:text="Altura"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioFem"
-        tools:ignore="MissingConstraints" />
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="Calculo IMC"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/radioMasc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Peso ideal"
+            android:layout_marginBottom="5dp"
+            android:textSize="20dp"
+            >
 
-    <RadioButton
-        android:id="@+id/radioFem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="FEMININO"
-        android:textColor="#DACBCB"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.167"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioMasc"
-        tools:ignore="MissingConstraints" />
+        </TextView>
 
-    <RadioButton
-        android:id="@+id/radioMasc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MASCULINO"
-        android:textColor="#E4D2D2"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.175"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="163dp" />
+        <EditText
+            android:id="@+id/txtAltura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Altura:"
+            android:textSize="20dp"
 
-    <EditText
-        android:id="@+id/editTextNumber2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.229"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/radioFem"
-        tools:ignore="MissingConstraints" />
+          >
+
+        </EditText>
+        <TextView
+            android:id="@+id/txtSexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Selecione o sexo"
+            android:textAlignment="center"
+            android:textSize="12dp"
+            android:padding="8dp"
+            android:textColorHint="@color/white">
+
+            >
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        </TextView>
+
+        <RadioButton
+            android:id="@+id/checkboxHomem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Homem"
+            android:padding="16dp"
+            android:layout_marginTop="5dp"
+
+            >
+
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/checkboxMulher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mulher"
+            android:padding="16dp"
+            android:layout_marginTop="5dp"
+            >
+
+        </RadioButton>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="calcular o imc"
+            android:backgroundTint="@color/black"
+            android:padding="16dp"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:background="@color/cardview_dark_background"
+            >
+
+        </Button>
+
+    </LinearLayout>
+
+</RelativeLayout>
